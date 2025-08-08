@@ -91,7 +91,7 @@ def winner(board):
     if check_values(second_values)[0]:
         win = check_values(second_values)[1]
         return win
-    return False
+    return None
 
 
 def terminal(board):
@@ -100,6 +100,7 @@ def terminal(board):
             for col in range(len(board)):
                 if board[row][col] == EMPTY:
                     return False
+        return True
     else: return True
 
 def utility(board):
